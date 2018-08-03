@@ -1,0 +1,17 @@
+{
+  "name": "a-number-field",
+  "description": "A number field with up/down buttons",
+  "main": "a-number-field.js",
+  "dependencies": {
+    "@polymer/iron-icon": "^3.0.0-pre.21",
+    "@polymer/polymer": "^3.0.0",
+    "@vaadin/vaadin-icons": "^4.2.0-beta2",
+    "@vaadin/vaadin-text-field": "^2.1.0-beta2",
+    "web-component-tester": "^6.7.1"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}

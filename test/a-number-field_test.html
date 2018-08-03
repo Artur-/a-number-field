@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>a-number-field test</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/wct-browser-legacy/browser.js"></script>
+
+    <script type="module" src="../a-number-field.js"></script>
+  </head>
+  <body>
+
+    <test-fixture id="BasicTestFixture">
+      <template>
+        <a-number-field></a-number-field>
+      </template>
+    </test-fixture>
+
+    <script type="module">
+      suite('a-number-field', () => {
+
+        test('instantiating the element with default properties works', () => {
+          const element = fixture('BasicTestFixture');
+          assert.equal(1, element.value);
+          assert.equal(0, element.min);
+          assert.equal(100, element.max);
+        });
+
+        test('changing limits changes value', () => {
+          // Create a test fixture
+          const element = fixture('BasicTestFixture');
+          element.value=10;
+          element.min=20;
+          assert.equal(20, element.value);
+
+          element.min=1;
+          element.max=10;
+          assert.equal(10, element.value);
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
